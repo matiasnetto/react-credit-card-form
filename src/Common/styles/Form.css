@@ -1,0 +1,146 @@
+/*#######*/
+/* FORM */
+/*#######*/
+
+.form-container {
+  height: 40vh;
+  width: 100%;
+  margin-top: 2em;
+}
+
+.form {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.form__input-container {
+  width: fit-content;
+  height: fit-content;
+}
+
+.form__input-container--type {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__input-container--security-code {
+  margin-left: 20vw;
+}
+
+.form__input-label {
+  color: var(--dark-blue);
+  font-size: 1.05em;
+  font-weight: 500;
+}
+
+.form__input-subcontainer {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.form__icon {
+  height: 1.8rem;
+  width: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1em;
+}
+
+.form__icon-image {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.form__input {
+  width: 70vw;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid var(--blue);
+  font-size: 1.2em;
+}
+
+.form__input--number {
+  width: 55vw;
+}
+
+.form__input--small {
+  width: 10vw;
+  text-align: center;
+}
+
+.form__input-flex-container {
+  display: flex;
+}
+
+.form__type-select-button {
+  height: 2.8em;
+  width: 3.8em;
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  border: 2px solid var(--dark-blue);
+  border-radius: 3px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.form__select-button-image {
+  height: 80%;
+  width: 80%;
+  object-fit: contain;
+}
+
+.form__select-down-img {
+  height: 40%;
+  margin-left: 5px;
+}
+
+@media (min-width: 996px) {
+  .form-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .form {
+    width: 100%;
+  }
+  .form__input-container--type {
+    margin-left: 2rem;
+    /* width: 100%; */
+  }
+
+  .form__input-subcontainer {
+    width: 100%;
+  }
+
+  .form__input {
+    width: 100%;
+  }
+  .form__input--small {
+    width: 5rem !important;
+  }
+
+  .form__input-label {
+    font-size: 1.2em;
+  }
+
+  .form__input-container--security-code {
+    margin-left: 15%;
+  }
+
+  .form__icon {
+    height: 2.1rem;
+    width: 2.1rem;
+  }
+}

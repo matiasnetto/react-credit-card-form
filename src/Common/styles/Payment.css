@@ -1,0 +1,44 @@
+/*#########*/
+/* PAYMENT */
+/*#########*/
+
+.payment-container {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+
+.payment-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-block--button {
+  justify-content: end;
+}
+
+.payment__title {
+  font-size: 1.1em;
+  color: var(--dark-blue);
+}
+
+.payment__amount {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #333;
+  margin-top: 6px;
+}
+
+.payment__button {
+  font-size: 1.6em;
+  padding: 10px 20px;
+  color: #eee;
+  background: var(--dark-blue);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}

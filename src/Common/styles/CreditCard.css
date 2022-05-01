@@ -1,0 +1,197 @@
+/*#############*/
+/* CREDIT CARD */
+/*#############*/
+
+.credit-card-main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5vh;
+}
+
+.tilt-container {
+  height: fit-content;
+  width: fit-content;
+}
+
+.credit-card {
+  width: calc(var(--card-size) * 1.618);
+  height: var(--card-size);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1em;
+  border-radius: 15px;
+  overflow: hidden;
+  /* Created with https://www.css-gradient.com */
+  background: #91b6ff;
+  background: -webkit-linear-gradient(right, #91b6ff, #3f81ff);
+  background: -moz-linear-gradient(right, #91b6ff, #3f81ff);
+  background: linear-gradient(to left, #91b6ff, #3f81ff);
+  box-shadow: 0 0 12px #0002 inset;
+
+  /* Created with https://www.css-gradient.com */
+  /* background: #91b6ff;
+  background: -webkit-linear-gradient(right, #91b6ff, #3f81ff);
+  background: -moz-linear-gradient(right, #91b6ff, #3f81ff);
+  background: linear-gradient(to left, #91b6ff, #3f81ff); */
+}
+
+.credit-card__row {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+  /* border: 1px solid #f00; */
+}
+
+.credit-card__row--type {
+  justify-content: end;
+}
+
+.credit-card__row--name {
+  color: #fff;
+  font-size: 1.1em;
+  /* justify-content: space-between; */
+}
+
+.visa-card {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../Assets/map.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 80%;
+}
+
+.mastercard-card {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url('../Assets/globe.png');
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+  opacity: 60%;
+}
+
+.credit-card__type-image {
+  height: 130%;
+}
+
+.credit-card__chip-image {
+  height: 90%;
+}
+
+.credit-card__card-number {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.credit-card__name {
+  width: 70%;
+}
+
+/* Hover message */
+
+@keyframes messageApear {
+  0% {
+    opacity: 0%;
+    visibility: visible;
+  }
+  10% {
+    opacity: 100%;
+  }
+  90% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    display: none;
+    visibility: hidden;
+  }
+}
+
+.hover-message {
+  width: calc(var(--card-size) * 1.618);
+  height: var(--card-size);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 99;
+  background: #0004;
+  border-radius: 15px;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+
+  animation: messageApear 4s 6s forwards;
+}
+
+.hover-message__text {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+@keyframes fingerAnimation {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+
+.hover-message__img {
+  height: 35%;
+  margin-top: 1rem;
+  animation: fingerAnimation 1.5s ease-in-out alternate infinite;
+}
+
+@media (min-width: 996px) {
+  .credit-card-main-container {
+    width: 50%;
+    padding-top: 0;
+  }
+
+  .credit-card {
+    padding: 1.5rem;
+  }
+
+  .credit-card__name {
+    font-size: 1.3rem;
+  }
+
+  .credit-card__card-number {
+    font-size: 1.3em;
+  }
+
+  .credit-card__exp-date {
+    font-size: 1.1rem;
+  }
+
+  .credit-card__type-image {
+    height: 110%;
+  }
+
+  .hover-message__text {
+    font-size: 2rem;
+  }
+
+  .hover-message__img {
+    height: 40%;
+  }
+}
