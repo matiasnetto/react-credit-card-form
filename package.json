@@ -1,10 +1,9 @@
 {
-  "homepage": "https://matiasnetto.github.io/react-credit-card-form/",
   "name": "credit-card-form",
   "version": "1.0.0",
   "scripts": {
     "start": "vite --host",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build --base=/react-credit-card-form/",
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
